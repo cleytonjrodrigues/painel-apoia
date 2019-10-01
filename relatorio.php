@@ -43,14 +43,19 @@ if (isset($_POST['submit'])) {
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-  
-      <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="util\bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/style.css">
 	  <link rel="stylesheet" href="css/style_table.css">
+
 
   
 </head>
 
 <body>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/e5f7e3426d.js" crossorigin="anonymous"></script>
+
 <div id="viewport">
   <!-- Sidebar -->
   <div id="sidebar">
@@ -106,15 +111,22 @@ if (isset($_POST['submit'])) {
 	<div class="div_content_3">
 	<h2>Procurar bolsista pelo nome</h2>
 	
-	<form method="post">
+	<form method="post" class="form-inline">
 	  <input name="csrf" type="hidden" value="<?php echo escape($_SESSION['csrf']); ?>">
-	  <label for="nome_bolsista">Nome</label>
-	  <input type="text" id="nome_bolsista" name="nome_bolsista">
-	  <input type="submit" name="submit" value="ver_relatorios">
+    <div class="form-group mb-2">
+	    <label for="nome_bolsista" class="form-control-plaintext" >Nome</label>
+    </div>
+    <div class="form-group mx-sm-3 mb-2">
+      <input type="text" class="form-control" id="nome_bolsista" name="nome_bolsista">
+    </div>
+
+    <input type="submit" class="btn btn-primary mb-2" name="submit" value="ver_relatorios">
+
+
 	</form>
-	<div>
-	<a href="home.php">Voltar</a>
-	</div>
+
+	<a href="home.php" class="fas fa-long-arrow-alt-left" >Voltar</a>
+
 	</div>
 	
 	<div class="div_content_3">
@@ -140,91 +152,93 @@ if (isset($_POST['submit'])) {
         </label>
     </div>
 	</div>
-  
-  <div class="table">
-    
-    <div class="row header blue">
+
+  <div class="container">  
+    <div class="table">
+      
+      <div class="row header blue">
+        <div class="cell">
+          Ano Letivo
+        </div>
+        <div class="cell">
+          Bimestre / Trimestre
+        </div>
+        <div class="cell">
+          Matemática
+        </div>
+        <div class="cell">
+          Português
+        </div>
       <div class="cell">
-        Ano Letivo
-      </div>
+          Biologia
+        </div>
       <div class="cell">
-        Bimestre / Trimestre
-      </div>
+          Física
+        </div>
       <div class="cell">
-        Matemática
-      </div>
+          Química
+        </div>
       <div class="cell">
-        Português
+          Inglês
+        </div>
       </div>
-	  <div class="cell">
-        Biologia
+      
+      <div class="row">
+        <div class="cell">
+          2019
+        </div>
+        <div class="cell">
+          1
+        </div>
+        <div class="cell">
+          7
+        </div>
+        <div class="cell">
+          8
+        </div>
+      <div class="cell">
+          7
+        </div>
+      <div class="cell">
+          9
+        </div>
+      <div class="cell">
+          8
+        </div>
+      <div class="cell">
+          8
+        </div>
       </div>
-	  <div class="cell">
-        Física
-      </div>
-	  <div class="cell">
-        Química
-      </div>
-	  <div class="cell">
-        Inglês
+      
+      <div class="row">
+        <div class="cell">
+          2019
+        </div>
+        <div class="cell">
+          2
+        </div>
+        <div class="cell">
+          7
+        </div>
+        <div class="cell">
+          5
+        </div>
+      <div class="cell">
+          7
+        </div>
+      <div class="cell">
+          4
+        </div>
+      <div class="cell">
+          8
+        </div>
+      <div class="cell">
+          8
+        </div>
       </div>
     </div>
-    
-    <div class="row">
-      <div class="cell">
-        2019
-      </div>
-      <div class="cell">
-        1
-      </div>
-      <div class="cell">
-        7
-      </div>
-      <div class="cell">
-        8
-      </div>
-	  <div class="cell">
-        7
-      </div>
-	  <div class="cell">
-        9
-      </div>
-	  <div class="cell">
-        8
-      </div>
-	  <div class="cell">
-        8
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="cell">
-        2019
-      </div>
-      <div class="cell">
-        2
-      </div>
-      <div class="cell">
-        7
-      </div>
-      <div class="cell">
-        5
-      </div>
-	  <div class="cell">
-        7
-      </div>
-	  <div class="cell">
-        4
-      </div>
-	  <div class="cell">
-        8
-      </div>
-	  <div class="cell">
-        8
-      </div>
-    </div>
-  </div>
-  
+  </div>  
+
   <div class="div_content_3">
     <div class="div_content_3_title">
         <strong class="label_content_3">Meu desempenho acadêmico</strong>
