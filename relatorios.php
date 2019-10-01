@@ -28,6 +28,7 @@ if (isset($_POST['submit'])) {
     $statement->execute();
 
     $result = $statement->fetchAll();
+	
   } catch(PDOException $error) {
       echo $sql . "<br>" . $error->getMessage();
   }
