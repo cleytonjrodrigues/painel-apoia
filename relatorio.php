@@ -48,7 +48,6 @@ if (isset($_POST['submit'])) {
 	  <link rel="stylesheet" href="css/style_table.css">
 
 
-  
 </head>
 
 <body>
